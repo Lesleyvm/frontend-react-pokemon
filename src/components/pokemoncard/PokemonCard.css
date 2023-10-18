@@ -1,0 +1,44 @@
+.inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    gap: 40px;
+    margin: 15px 15px;
+}
+
+
+.pokemon-card {
+    display: flex;
+    flex-basis: 300px;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid mediumaquamarine;
+    margin: 0;
+    padding: 0;
+}
+
+.button-wrapper {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.abilities {
+    width: 150px;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid mediumpurple;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 25px;
+}
+
+.loading-message {
+    color: #747bff;
+    font-size: 25px;
+}

@@ -1,1 +1,7 @@
-/*Schrijf hier jouw eigen CSS!*/
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
