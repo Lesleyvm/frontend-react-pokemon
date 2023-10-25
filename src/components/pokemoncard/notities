@@ -1,0 +1,28 @@
+
+ {pokemon.length > 0 && pokemon.map((pokemon) => (
+                    <div key={pokemon.id} className="pokemon-card">
+                        <h2>{pokemon.name}</h2>
+                        <figure>
+                            <img src={pokemon.sprites && pokemon.sprites.front_default} alt=""/>
+                        </figure>
+                        <h3>Moves: {pokemon.moves && pokemon.moves.length}</h3>
+                        {/*of {pokemon.moves ? pokemon.moves.length : 0}*/}
+                        <h3>Weight: {pokemon.weight}</h3>
+                        <h3>Abilities:</h3>
+                        <ul>
+                            {pokemon.abilities && pokemon.abilities.map((abilityData, index) => (
+                                <li key={index}>{abilityData.ability.name}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+
+Hier zijn checks aan toegevoegd, deze waren verplicht voordat de map methode over mijn pokemon card ging. Na het toevoegen van deze functies lijken deze checks niet meer nodig.
+
+TIP van chatGPT;
+
+De checks die je hebt toegevoegd, zoals `pokemon.abilities &&` en `pokemon.sprites &&`, zijn bekend als optionele checks of conditional checks. Ze worden vaak gebruikt om te voorkomen dat er fouten optreden als je toegang probeert te krijgen tot eigenschappen van een object die mogelijk niet bestaan of `undefined` zijn. Dit is een goede praktijk om JavaScript-fouten te voorkomen.
+
+In sommige gevallen, zoals wanneer je er zeker van bent dat de gegevens altijd de verwachte structuur hebben, kun je de checks verwijderen om de code wat schoner te maken. Het is echter altijd een goed idee om optionele checks te behouden, vooral als de gegevens uit externe bronnen komen (zoals een API) waarvan je niet volledig de controle hebt over de structuur van de gegevens.
+
+Dus het is een kwestie van keuze en hangt af van hoe robuust je je code wilt maken. Als je zeker weet dat de gegevens consistent zijn en de checks redundant lijken, kun je ze verwijderen om de code korter en leesbaarder te maken. Maar als er enige twijfel is over de gegevensintegriteit, is het veiliger om de checks te behouden om onverwachte fouten te voorkomen. Het is een balans tussen schone code en robuustheid.
